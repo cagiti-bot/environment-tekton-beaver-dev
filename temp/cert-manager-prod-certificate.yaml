@@ -1,0 +1,11 @@
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Certificate
+metadata:
+  name: "tls-infra-jenkins-x-rocks-p"
+spec:
+  secretName: "tls-infra-jenkins-x-rocks-p"
+  issuerRef:
+    name: letsencrypt-prod
+  commonName: "*.infra.jenkins-x.rocks"
+  dnsNames:
+  - "*.infra.jenkins-x.rocks"
